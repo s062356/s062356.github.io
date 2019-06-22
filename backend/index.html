@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ShopTime</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="logo_area">
+				<h1>
+					<a href="#">Shoptime</a>
+				</h1>
+			</div>
+			<div class="list_area">
+				<ul>
+					<li class="active">
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="order.html">ORDERS</a>
+					</li>
+					<li>
+						<a href="product.html">PRODUCT</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sign_in_area">
+				<a href="#">ADMIN</a>
+			</div>
+			<div class="clear_fix"></div>
+		</div>
+		<!-- 中間內容 -->
+		<div class="content">
+			<div class="title_area">
+				<h2>OVERVIEW</h2>
+				<div class="date_area">
+					<span>2018/6/6</span>
+					<span></span>
+					<span>2018/6/13</span>
+					<span>
+						<a href="#">Weekly</a>
+					</span>
+				</div>
+			</div>
+			<!-- 總計的三個表格 -->
+			<div class="total_box_area">
+				<div class="total_box">
+					<p>TOTAL REVENUE</p>
+					<span class="revenue">54,540</span>
+				</div>
+				<div class="total_box margin_adjust">
+					<p>TOTAL COST</p>
+					<span class="cost">12,660</span>
+				</div>
+				<div class="total_box margin_adjust">
+					<p>NET ICOME</p>
+					<span class="net_icome">41,880</span>
+				</div>
+			</div>
+			<!-- 圖表內容 -->
+			<div class="chart_area">
+				<h2>Activity</h2>
+				<div>
+					<canvas id="chart_photo">
+					</canvas>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer_box">
+					<h2>Transaction</h2>
+					<div class="social_list">
+						<span></span>
+						<p class="w200">Facebook.com</p>
+						<span class="w62">45,836</span>
+						<p class="up_color">20%</p>
+					</div>
+					<div class="social_list">
+						<span></span>
+						<p class="w200">google.com</p>
+						<span class="w62">23,582</span>
+						<p class="up_color">12%</p>
+					</div>
+					<div class="social_list">
+						<span></span>
+						<p class="w200">Shopify.com</p>
+						<span class="w62">2,489</span>
+						<p class="down_color">15%</p>
+					</div>
+					<div class="social_list last_list">
+						<span></span>
+						<p class="w200">Wordpress.com</p>
+						<span class="w62">1,057</span>
+						<p class="down_color">30%</p>
+					</div>
+				</div>
+				<div class="footer_box margin_adjust">
+					<h2>Latest Orders</h2>
+					<div class="people_list">
+						<div class="photo_area">
+							<img src="css/images/images.jpg">
+						</div>
+						<div class="photo_detail">
+							<h3>Vintage T-shirt</h3>
+							<p>2018/6/13 13:42</p>
+							<p>Belle Willis</p>
+						</div>
+					</div>
+					<div class="people_list">
+						<div class="photo_area">
+							<img src="css/images/images.jpg">
+						</div>
+						<div class="photo_detail">
+							<h3>Vintage T-shirt</h3>
+							<p>2018/6/13 13:42</p>
+							<p>Belle Willis</p>
+						</div>
+					</div>
+					<div class="people_list">
+						<div class="photo_area">
+							<img src="css/images/images.jpg">
+						</div>
+						<div class="photo_detail">
+							<h3>Vintage T-shirt</h3>
+							<p>2018/6/13 13:42</p>
+							<p>Belle Willis</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script>
+	var ctx = document.getElementById("chart_photo");
+	var chart_area = new Chart(ctx, {
+		type: "line",
+		data: {
+			labels: ['Feb 3', 'Feb 4', 'Feb 5', 'Feb 6', 'Feb 7', 'Feb 8'],
+		    datasets: [{
+		      fill: 'false',
+	    	  label: 'TOTAL REVENUE',
+	    	  data: [3000, 4000, 5000, 6000, 7000, 8000],
+		      backgroundColor: [
+		        "#CCEEFF"
+		      ],
+		      borderColor: [
+		        "#0088A8"
+		      ],
+		      borderWidth: 1
+		    }, {
+		    	fill: 'false',
+		    	label: "TOTAL COST",
+		    	data: [3500, 4500, 5500, 6500, 7500, 8500],
+		    	backgroundColor: [
+		    		"#FFDDAA"
+		    	],
+		    	borderColor: [
+		    		"#4A90E2"
+		    	],
+		    	// pointBackgroundColor: [
+		    	// 	"#4A90E2",
+		    	// ],
+		    	borderWidth: 1
+		    }, {
+		    	fill: 'false',
+		    	label: "NET INCOME",
+		    	data: [4700, 5100, 6000, 7800, 8000, 9000],
+		    	backgroundColor: [
+		    		"#FFFFBB"
+
+		    	],
+		    	borderColor: [
+		    		"#D00218"
+		    	],
+		    	borderWidth: 1
+		    }]
+		  },
+		  options: {
+		  	bezierCurve: false,
+		  	elements: {
+		  		line: {
+		  			tension: 0,
+		  		}
+		  	}
+		  }
+		});
+</script>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ORDER</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="UIjs/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="logo_area">
+				<h1>
+					<a href="#">Shoptime</a>
+				</h1>
+			</div>
+			<div class="list_area">
+				<ul>
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li class="active">
+						<a href="#">ORDERS</a>
+					</li>
+					<li>
+						<a href="product.html">PRODUCT</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sign_in_area">
+				<a href="#">ADMIN</a>
+			</div>
+			<div class="clear_fix"></div>
+		</div>
+		<!-- 內容 -->
+		<div class="order_content">
+			<div class="select_area">
+				<!-- <input type="checkbox"> -->
+				<div></div>
+				<div class="edit">
+					<p>EDIT SECTION</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="order">
+							<label for="order">Order Id</label>
+						</li>
+						<li>
+							<input type="checkbox" id="customer">
+							<label for="customer">Customer</label>
+						</li>
+						<li>
+							<input type="checkbox" id="product">
+							<label for="product">Product List</label>
+						</li>
+						<li>
+							<input type="checkbox" id="total">
+							<label for="total">Total</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- title -->
+			<ul class="order_title_box">
+				<li>
+					<input type="checkbox">
+				</li>
+				<li class="title_font_size w_12">
+					<p>Customer</p>
+				</li>
+				<li class="title_font_size w_15">
+					<p>Product List</p>
+				</li>
+				<li class="title_font_size w_15 font_center">
+					<p>Total</p>
+				</li>
+				<li class="title_font_size w_12">
+					<p>Add To Cart</p>
+				</li>
+				<li class="title_font_size w_12">
+					<p>Check-out</p>
+				</li>
+				<li class="title_font_size w_15">
+					<p>Address</p>
+				</li>
+				<li class="title_font_size w_19">
+					<p>Status</p>
+				</li>
+			</ul>
+			<ul class="order_content_box">
+				<li>
+					<!-- checkbox -->
+					<input type="checkbox">
+					<!-- customer name -->
+					<div class="title_font_size w_12 topsize">
+						<p>Ian Medina</p>
+					</div>
+					<!-- list -->
+					<div class="title_font_size w_15">
+						<div class="product_box">
+							<p>Vestibulum.</p>
+							<p>$1400</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+							<div class="border_area"></div>
+						</div>
+						<div class="product_box">
+							<p>Fusce vehicu.</p>
+							<p>$800</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+						</div>
+					</div>
+					<!-- total -->
+					<div class="title_font_size w_15 font_center topsize">
+						<p>$2200</p>
+					</div>
+					<!-- add to cart -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 13:39</p>
+					</div>
+					<!-- checkout -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 20:23</p>
+					</div>
+					<!-- address -->
+					<div class="title_font_size w_15 topsize">
+						<p>386 Windler Drivers Apt. 358</p>
+					</div>
+					<!-- status -->
+					<div class="title_font_size w_19 topsize">
+						<p class="paid_area" id="paid_area">PAID</p>
+						<!-- 下拉式選單 -->
+						<ul class="check_list">
+							<li>Paid</li>
+							<li>Unpaid</li>
+							<li>Shipping</li>
+							<li>Done</li>
+						</ul>
+						<!-- <p class="shipping_area">SHIPPING</p> -->
+						<!-- <p class="done_area">DONE</p> -->
+						<!-- <p class="unpaid_area">UNPAID</p> -->
+					</div>
+				</li>
+				<li>
+					<!-- checkbox -->
+					<input type="checkbox">
+					<!-- customer name -->
+					<div class="title_font_size w_12 topsize">
+						<p>Ian Medina</p>
+					</div>
+					<!-- list -->
+					<div class="title_font_size w_15">
+						<div class="product_box">
+							<p>Vestibulum.</p>
+							<p>$1400</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+							<div class="border_area"></div>
+						</div>
+						<div class="product_box">
+							<p>Fusce vehicu.</p>
+							<p>$800</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+							<div class="border_area"></div>
+						</div>
+						<div class="product_box">
+							<p>Fusce vehicu.</p>
+							<p>$800</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+						</div>
+					</div>
+					<!-- total -->
+					<div class="title_font_size w_15 font_center topsize">
+						<p>$2200</p>
+					</div>
+					<!-- add to cart -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 13:39</p>
+					</div>
+					<!-- checkout -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 20:23</p>
+					</div>
+					<!-- address -->
+					<div class="title_font_size w_15 topsize">
+						<p>386 Windler Drivers Apt. 358</p>
+					</div>
+					<!-- status -->
+					<div class="title_font_size w_19 topsize">
+						<!-- <p class="paid_area">PAID</p> -->
+						<p class="shipping_area">SHIPPING</p>
+						<!-- <p class="done_area">DONE</p> -->
+						<!-- <p class="unpaid_area">UNPAID</p> -->
+						<ul class="check_list">
+							<li>Paid</li>
+							<li>Unpaid</li>
+							<li>Shipping</li>
+							<li>Done</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<!-- checkbox -->
+					<input type="checkbox">
+					<!-- customer name -->
+					<div class="title_font_size w_12 topsize">
+						<p>Ian Medina</p>
+					</div>
+					<!-- list -->
+					<div class="title_font_size w_15">
+						<div class="product_box">
+							<p>Vestibulum.</p>
+							<p>$1400</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+							<div class="border_area"></div>
+						</div>
+					</div>
+					<!-- total -->
+					<div class="title_font_size w_15 font_center topsize">
+						<p>$2200</p>
+					</div>
+					<!-- add to cart -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 13:39</p>
+					</div>
+					<!-- checkout -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 20:23</p>
+					</div>
+					<!-- address -->
+					<div class="title_font_size w_15 topsize">
+						<p>386 Windler Drivers Apt. 358</p>
+					</div>
+					<!-- status -->
+					<div class="title_font_size w_19 topsize">
+						<!-- <p class="paid_area">PAID</p> -->
+						<!-- <p class="shipping_area">SHIPPING</p> -->
+						<p class="done_area">DONE</p>
+						<!-- <p class="unpaid_area">UNPAID</p> -->
+						<ul class="check_list">
+							<li>Paid</li>
+							<li>Unpaid</li>
+							<li>Shipping</li>
+							<li>Done</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<!-- checkbox -->
+					<input type="checkbox">
+					<!-- customer name -->
+					<div class="title_font_size w_12 topsize">
+						<p>Ian Medina</p>
+					</div>
+					<!-- list -->
+					<div class="title_font_size w_15">
+						<div class="product_box">
+							<p>Vestibulum.</p>
+							<p>$1400</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+							<div class="border_area"></div>
+						</div>
+						<div class="product_box">
+							<p>Fusce vehicu.</p>
+							<p>$800</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+							<div class="border_area"></div>
+						</div>
+						<div class="product_box">
+							<p>Fusce vehicu.</p>
+							<p>$800</p>
+							<span>1</span>
+							<div class="clear_fix"></div>
+						</div>
+					</div>
+					<!-- total -->
+					<div class="title_font_size w_15 font_center topsize">
+						<p>$2200</p>
+					</div>
+					<!-- add to cart -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 13:39</p>
+					</div>
+					<!-- checkout -->
+					<div class="title_font_size w_12 topsize">
+						<p>2018/6/8 20:23</p>
+					</div>
+					<!-- address -->
+					<div class="title_font_size w_15 topsize">
+						<p>386 Windler Drivers Apt. 358</p>
+					</div>
+					<!-- status -->
+					<div class="title_font_size w_19 topsize">
+						<!-- <p class="paid_area">PAID</p> -->
+						<p class="shipping_area">SHIPPING</p>
+						<!-- <p class="done_area">DONE</p> -->
+						<!-- <p class="unpaid_area">UNPAID</p> -->
+						<ul class="check_list">
+							<li>Paid</li>
+							<li>Unpaid</li>
+							<li>Shipping</li>
+							<li>Done</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<!-- 頁數 -->
+			<div class="footer_page">
+				<ul class="footer_area">
+					<li><<</li>
+					<li>1</li>
+					<li>2</li>
+					<li class="page_active">3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>>></li>
+				</ul>
+			</div>
+			<div class="clear_fix"></div>
+		</div>
+	</div>
+</body>
+</html>
