@@ -1,0 +1,93 @@
+.form-group{
+    label{
+        margin-bottom: 0.2rem;
+    }
+}
+.chosen-select{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1CBB8B!important;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.chosen-select:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #c2e5fc;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(72, 176, 247, 0.25);
+}
+.input-group-prepend.select{
+    border:1px solid #ced4da;
+    -moz-border-radius-topleft: 0.25rem;
+    -moz-border-radius-bottomleft:0.25rem;
+    -webkit-border-top-left-radius:0.25rem;
+    -webkit-border-bottom-left-radius:0.25rem;
+    border-top-left-radius:0.25rem;
+    border-bottom-left-radius:0.25rem;
+    select{
+        border:none;
+        background-color: transparent;
+
+    }
+}
+.input-wrapper{
+    border-bottom: 1px dashed #E6E6E6;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    .title{
+        color: $mainC1;
+        cursor: pointer;
+        i{
+            font-size: 12px;
+            position: relative;
+            top:-3px;
+        }
+        &.active{
+            i{
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            }
+        }
+    }
+}
+.category-content{
+    margin-bottom: 15px;
+    &:last-child{
+        margin-bottom: 0px;
+    }
+    .main-category{
+        border-top:1px solid #E6E6E6;
+        .main-category-title{
+            border-left: 3px solid $mainC1;
+        }
+    }
+    .second-category{
+        margin-left: 30px;
+        .second-category-title{
+            border-left: 3px solid $mainC2;
+        }
+    }
+    .third-category{
+        margin-left: 30px;
+        .third-category-title{
+            border-left: 3px solid $mainC3;
+        }
+    }
+    .form-check{
+        display: block;
+        position: relative;
+        border-left:1px solid #E6E6E6;
+        border-right:1px solid #E6E6E6;
+        border-bottom:1px solid #E6E6E6;
+        background-color: #f3f6f5;
+        padding:8px 30px;
+    }
+}

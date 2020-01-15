@@ -1,0 +1,87 @@
+body{
+  //字體分別是Linux系統的文泉驛正黑，Mac的儷黑 Pro，Mac的黑體-繁(Mac OS 10.6 以後預設字型)，微软雅黑,微軟正黑體，英文，都沒有執行的字體
+  font-family:  normalFont,MHeiHK-Light,"Helvetica Neue",Helvetica,"san serif";
+  font-size: 15px;
+  background-color: #F3F6F5;
+  overflow: hidden;
+  overflow-y:auto;
+  color: $body-mainC;
+  // background: #fffefd url(../images/bg.png) fixed;
+  // background-position: center top;
+  // background-size:100%;
+  // overflow-x: hidden;
+  // @include bgfixed;  
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+ 
+}
+.mobile-scroll{
+  overflow:hidden;overflow-y:auto;
+-webkit-overflow-scrolling: touch;
+}
+
+a{
+  text-decoration: none;
+  &:hover,&:active,&:focus{
+  text-decoration: none;
+  }
+}
+a.fcW{
+  color: #fff;
+  &:hover,&:active,&:focus{
+  color: #fff;
+  }
+}
+.contentC{
+  color: lighten($body-mainC, 40);
+}
+
+.overhidden{
+    overflow: hidden;
+}
+.mainC1{color:$mainC1}
+.mainC2{color:$mainC2}
+.mainC3{color:$mainC3}
+.bgtextC1{background-color: $mainC1}
+.font-grey{
+  color:#808080;
+}
+.border-grey{
+    border-bottom: 1px dashed #B8C2BF;
+}
+.borBGE{
+    border-bottom: 1px solid #eee;
+}
+.borGC{
+    border: 1px solid #ccc;
+}
+
+
+// 消除foucs框線
+// input[type=text]:focus,
+// input[type=password]:focus,
+// textarea:focus,button:focus,
+// .form-control:focus{ 
+//  transition:border linear .2s,box-shadow linear 1s;
+//  -moz-transition:border linear .2s,-moz-box-shadow linear 1s;
+//  -webkit-transition:border linear .2s,-webkit-box-shadow linear 1s;
+//  outline:none;
+//  border-color: $mainC3; 
+//  box-shadow: none;
+//  -moz-box-shadow: none;
+//  -webkit-box-shadow: none;
+//   color: $mainC3;
+//   &::-webkit-input-placeholder { /* WebKit browsers */
+//     color: $mainC3;
+//   }
+//   &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//       color: $mainC3;
+//   }
+//   &::-moz-placeholder { /* Mozilla Firefox 19+ */
+//       color: $mainC3;
+//   }
+//   &:-ms-input-placeholder { /* Internet Explorer 10+ */
+//       color: $mainC3;
+//   }
+// }

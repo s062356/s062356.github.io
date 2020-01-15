@@ -1,0 +1,36 @@
+.table-edit{
+	min-width: 105px;
+	a{
+		border-right: 1px solid #CCCCCC;
+		padding: 0px 5px 0px 0px;
+		display: inline-block;
+		&:last-child{
+			border-right: none;
+		}
+		&.delete{
+			color: $mainC3;
+			&:hover{
+				color: darken($mainC3, 20);
+			}
+		}
+	}
+}
+.table-filter{
+	border-bottom: 1px solid #E6E6E6;
+	padding-bottom: 1rem;
+}
+table{
+	thead{
+		background-color: #F3F6F6;
+	}
+	.table-thumbnail{
+			width: 60px;
+			img{
+				width: 60px;
+			}
+	}
+}
+
+.table-hover tbody tr:hover {
+	background-color:#f6f6f6!important;
+}

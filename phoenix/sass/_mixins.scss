@@ -1,0 +1,135 @@
+// 響應式
+@mixin i480x640{
+  @media (min-width: 480px) and (max-width: 639px) { @content }
+}
+@mixin i640x768{
+  @media (min-width: 640px) and (max-width: 767px) { @content }
+}
+@mixin i480x768{
+  @media (min-width: 480px) and (max-width: 767px) { @content }
+}
+@mixin i768x992{
+  @media (min-width: 768px) and (max-width: 991px) { @content }
+}
+@mixin i992x1200{
+  @media (min-width: 992px) and (max-width: 1199px) { @content }
+}
+@mixin i480{
+  @media (min-width: 480px) { @content }
+}
+@mixin i640{
+  @media (min-width: 640px) { @content }
+}
+@mixin i768{
+  @media (min-width: 768px) { @content }
+}
+@mixin i992{
+  @media (min-width: 992px) { @content }
+}
+@mixin i1200{
+  @media (min-width: 1200px) {  @content }
+}
+@mixin i1680{
+  @media (min-width: 1680px) { @content }
+}
+@mixin x480{
+  @media (max-width: 479px) { @content }
+}
+@mixin x640{
+  @media (max-width: 640px) { @content }
+}
+@mixin x768{
+  @media (max-width: 767px) { @content }
+}
+@mixin x992{
+  @media (max-width: 991px) { @content }
+}
+@mixin x1200{
+  @media (max-width: 1199px) { @content }
+}
+@mixin x1680{
+  @media (max-width: 1679px) { @content }
+}
+
+
+// a連結樣式
+@mixin aHFA{
+  &:hover,&:active,&:focus { @content }
+}
+@mixin aH{
+  &:hover { @content }
+}
+@mixin aA{
+  &:active { @content }
+}
+@mixin aF{
+  &:focus { @content }
+}
+
+
+// 背景覆蓋樣式
+@mixin bgcover{
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+@mixin bgfixed{
+  background-attachment: fixed;
+}
+
+/*圖片外框樣式*/
+@mixin radius($px){
+    -webkit-border-radius: $px;
+    -moz-border-radius: $px;
+    border-radius: $px;
+}    
+/*文字陰影*/
+@mixin text-shadow($color,$x,$y,$px){
+    text-shadow:$color $x $y $px;}
+    
+/*圖片陰影*/
+@mixin box-shadow($x,$y,$px,$color){
+    -moz-box-shadow: $x $y $px $color;
+    -webkit-box-shadow: $x $y $px $color;
+    box-shadow: $x $y $px $color;
+}
+// 文字超過出現點點點
+@mixin textflowell{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+}
+
+@mixin textflown($n){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+}
+
+
+// 漸變設定
+@mixin transition($s){
+    -o-transition: all $s ease;
+    -webkit-transition: all  $s ease;
+    -moz-transition: all  $s ease;
+    transition:  all  $s ease;
+}
+
+// 英文單字太長自動斷行設定
+@mixin breakword{
+    word-wrap: break-word;
+}
+
+//文字獄設過長換行
+@mixin whitenormal{
+    white-space: normal;
+}
+
+//區塊同高度
+@mixin smallheight{
+    padding-bottom:10000px;
+    margin-bottom:-10000px;
+}

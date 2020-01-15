@@ -1,0 +1,123 @@
+.side-nav{
+	position: fixed;
+	top:0px;
+	left: -260px;
+	background-color: $navbg;
+	border-right: 1px solid darken($navbg, 5);
+	width: 260px;
+	height: 100%;
+	z-index: 10;
+	overflow-y:auto;
+	@include transition(0.3s);
+	&.active{
+		top:0px;
+		left:0px;
+		@include x768{
+
+		}
+	}
+	a{
+		width: 100%;
+		display: block;
+		padding:10px 30px;
+		color: lighten($navbg, 68);
+		@include transition(0.2s);
+		&:after{
+			float: none;
+			content:'';
+		}
+		&:hover{
+			background-color: darken($navbg, 10);
+			color: lighten($navbg, 100);
+		}
+		.nav-title{
+			width: calc(100% - 60px );
+		}
+		span{
+			float: left;
+		}
+	}
+	.nav-logo{
+		width: 100%;
+		height: auto;
+		color: lighten($navbg, 100);
+		padding:40px 30px;
+		// margin:30px 0px;
+		// text-align: center;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.nav-title-icon{
+		width: 36px;
+		display: inline-block;
+		float: left;
+		padding-top: 3px;
+	}
+	.drawer{
+		.drawer-title{
+			cursor: pointer;
+			padding:10px 30px;
+			color: lighten($navbg, 68);
+			@include transition(0.2s);
+			&:hover{
+				background-color: darken($navbg, 10);
+				color: lighten($navbg, 100);
+			}
+			span,p{
+				float: left;
+			}
+			p{
+				width: calc(100% - 60px );
+				margin-bottom: 0px;
+			}
+			.fa-angle-right{
+				opacity: 0.4;
+				position: absolute;
+				right:30px;
+				font-size: 14px;
+				line-height: 21px;
+				@include transition(0.3s);
+				-webkit-transform: rotate(-90deg);
+				-moz-transform: rotate(-90deg);
+				-o-transform: rotate(-90deg);
+				writing-mode: lr-tb;
+			}
+		}
+		.drawer-menu{
+				background-color: darken($navbg, 20);
+				a{
+					padding:10px 66px;
+				}
+		}
+		&.active{
+			background-color: darken($navbg, 20);
+			.drawer-title{
+				color: lighten($navbg, 100);
+				.fa-angle-right{
+					-webkit-transform: rotate(90deg);
+					-moz-transform: rotate(90deg);
+					-o-transform: rotate(90deg);
+					writing-mode: lr-tb;
+				}
+			}
+		}
+	}
+}
+@include x768{
+	.cover{
+			opacity: 0;
+			@include transition(0.3s);
+			&.active{
+			position: fixed;
+			top: 54px;
+			left: 0px;
+			width: 100%;
+			height:calc(100% - 54px);
+			background-color: $navbg;
+			z-index: 5;
+			opacity: 0.5;
+			}
+		}
+}
