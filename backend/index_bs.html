@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--文章編碼：utf8萬國碼 big5繁體中文-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--IE6 7 8 支援新的格式-->
+    <meta name="viewport" content="width=device-width;initial-scale=1, maximum-scale=1, user-scalable=no;">
+    <!--行動裝置伸縮比例模式-->
+    <!-- 針對蘋果手機開始 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <title>ShopTime</title>
+    <!--最重要的關鍵字-->
+    <meta name="description" content="描述字">
+    <!--更新日期-->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!--分頁標籤圖示-->
+    <link rel="stylesheet" href="css/bootstrap4/bootstrap.css">
+    <!-- 參考網站http://getbootstrap.com/ -->
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- 自訂 -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/customized.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+</head>
+<body class="bg-grey">
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-title">SHOPTIME</div>
+                <ul class="header-list">
+                    <li>
+                        <a class="active" href="./index_bs.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./order_bs.html">ORDERS</a>
+                    </li>
+                    <li>
+                        <a href="./product.html">
+                            PRODUCT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div>ADMIN</div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content-title">
+                <div>OVERVIEW</div>
+                <div class="content-time">2020/6/1 ~ 2020/6/30 Month<i class="fas fa-caret-down"></i></div>
+            </div>
+            <div class="content-section">
+                <div class="row">
+                <div class="col-lg-4 col-12 maB10">
+                    <div class="card revenue" data-toggle="modal" data-target=".log-in-pop">
+                        <div class="card-title">TOTAL REVENUE 收入</div>
+                        <div class="card-number revenue">54,540</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 maB10">
+                    <div class="card" data-toggle="modal" data-target=".log-in-pop">
+                        <div class="card-title">TOTAL COST 支出</div>
+                        <div class="card-number cost">12,660</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 maB10">
+                    <div class="card">
+                        <div class="card-title">NET ICOME 收支</div>
+                        <div class="card-number net-icome">41,880</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- 圖表內容 -->
+			<div class="chart_area">
+				<h2>Activity</h2>
+				<div>
+					<canvas id="chart_photo">
+					</canvas>
+				</div>
+			</div>
+            <div class="section-result">
+                <div class="row">
+                <div class="col-lg-6 col-12 maB10">
+                    <div class="result-card">
+                        <div class="result-card-title">Transaction</div>
+                        <div class="result-content">
+                            <div class="result-title">facebook.com</div>
+                            <div class="result-number">
+                                <span class="total-price-size">45,836</span>
+                                <span class="percent green">20%</span>
+                            </div>
+                        </div> 
+                        <div class="result-content">
+                            <div class="result-title">google.com</div>
+                            <div class="result-number">
+                                <span class="total-price-size">23,582</span>
+                                <span class="percent wraning">12%</span>
+                            </div>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-title">shopify.com</div>
+                            <div class="result-number">
+                                <span class="total-price-size">2,489</span>
+                                <span class="percent green">15%</span>
+                            </div>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-title">wordpress.com</div>
+                            <div class="result-number">
+                                <span class="total-price-size">1,057</span>
+                                <span class="percent wraning">8%</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 maB10">
+                    <div class="result-card">
+                        <div class="result-card-title">Latest Orders</div>
+                        <div class="result-content">
+                            <img src="./css/images/images.jpg" />
+                            <div class="result-detail">
+                                <div>
+                                    <p>Vintage T-shirt</p>
+                                </div>
+                                <div class="salers-box">
+                                    <p>2018/06/13 13:42</p>
+                                    <span class="percent blue">Belle Willis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-content">
+                            <img src="./css/images/images.jpg" />
+                            <div class="result-detail">
+                                <div>
+                                    <p>Vintage T-shirt</p>
+                                </div>
+                                <div class="salers-box">
+                                    <p>2018/06/13 13:42</p>
+                                    <span class="percent blue">Belle Willis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-content">
+                            <img src="./css/images/images.jpg" />
+                            <div class="result-detail">
+                                <div>
+                                    <p>Vintage T-shirt</p>
+                                </div>
+                                <div class="salers-box">
+                                    <p>2018/06/13 13:42</p>
+                                    <span class="percent blue">Belle Willis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>    
+        </div>
+        <!-- modal -->
+        <div class="modal fade log-in-pop" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog log-in-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                <div class="modal-header-title">2020/06/01 ~ 2020/06/30 收入細項</div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <i class="material-icons">close</i>
+                  </button>
+                </div>
+                <!-- <div class="sign-up-logo"><img src="../../images/logo.png" alt=""></div> -->
+                <!-- <div class="car-title">福斯</div> -->
+                <div class="row modal-body">
+                    <div>
+                        <div style="height: 300px;">
+                            <svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct"
+                                width="100%" height="100%" class="ct-chart-pie" style="width: 100%; height: 100%;">
+                                <g class="ct-series ct-series-e">
+                                    <path d="M47.961,128.867A123.867,123.867,0,0,0,49.134,145.876L171.828,128.867Z" class="ct-slice-pie" ct:value="50"></path>
+                                </g>
+                                <g class="ct-series ct-series-d">
+                                    <path d="M49.076,145.447A123.867,123.867,0,0,0,58.71,179.34L171.828,128.867Z" class="ct-slice-pie" ct:value="105"></path>
+                                </g>
+                                <g class="ct-series ct-series-c">
+                                    <path d="M58.535,178.944A123.867,123.867,0,0,0,255.524,220.18L171.828,128.867Z" class="ct-slice-pie" ct:value="705"></path>
+                                </g>
+                                <g class="ct-series ct-series-b">
+                                    <path d="M255.205,220.472A123.867,123.867,0,0,0,282.822,73.881L171.828,128.867Z" class="ct-slice-pie" ct:value="480"></path>
+                                </g>
+                                <g class="ct-series ct-series-a">
+                                    <path d="M283.013,74.269A123.867,123.867,0,0,0,47.961,128.867L171.828,128.867Z" class="ct-slice-pie" ct:value="1000"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                  <ul class="car-type-chart">
+                    <li class="ct-series-a">
+                        <p data-target=".cost-image" data-toggle="modal" data-dismiss="modal">奧迪 43%</p>
+                    </li>
+                    <li class="ct-series-b">
+                        <p>賓士 21%</p>
+                    </li>
+                    <li class="ct-series-c">
+                        <p>福特 30%</p>
+                    </li>
+                    <li class="ct-series-d">
+                        <p>福斯 4%</p>
+                    </li>
+                    <li class="ct-series-e">
+                        <p>其他 2%</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- modal end -->
+        <div class="modal fade cost-image" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog log-in-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                <div class="modal-header-title">2020/06/01 ~ 2020/06/30 支出細項</div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <i class="material-icons">close</i>
+                  </button>
+                </div>
+                <!-- <div class="sign-up-logo"><img src="../../images/logo.png" alt=""></div> -->
+                <!-- <div class="car-title">福斯</div> -->
+                <div class="row modal-body">
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script>
+	var ctx = document.getElementById("chart_photo");
+	var chart_area = new Chart(ctx, {
+		type: "line",
+		data: {
+			labels: [ 'Jan' ,'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', "Sep", "Oct", "Nov", "Dec"],
+            datasets: [{
+		      fill: 'false',
+	    	  label: 'TOTAL REVENUE',
+	    	  data: [ 5000, 4000, 5000, 6000, 7000, 5000, 8000, 5000, 4000, 5000, 6000, 7000 ],
+		      backgroundColor: [
+		        // "#CCEEFF"
+                "transparent"
+		      ],
+		      borderColor: [
+		        "#7ED321"
+		      ],
+		      borderWidth: 2
+		    }, {
+		    	fill: 'false',
+		    	label: "TOTAL COST",
+		    	data: [ 3500, 4500, 3500, 6500, 7500, 5000, 8500, 3500, 4500, 3500, 6500, 7500 ],
+		    	backgroundColor: [
+		    		// "#FFDDAA"
+                    "transparent"
+		    	],
+		    	borderColor: [
+		    		"#D0021B"
+		    	],
+		    	borderWidth: 2
+		    }, {
+		    	fill: 'false',
+		    	label: "NET INCOME",
+		    	data: [ 4700, 5100, 6000, 7800, 8000, 5000, 9000, 4700, 5100, 6000, 7800, 8000 ],
+		    	backgroundColor: [
+		    		// "#FFFFBB"
+                    "transparent"
+		    	],
+		    	borderColor: [
+		    		"#4A90E2"
+		    	],
+		    	borderWidth: 2
+		    }]
+		  },
+		  options: {
+		  	bezierCurve: false,
+		  	elements: {
+		  		line: {
+		  			tension: 0,
+		  		}
+		  	}
+		  }
+		});
+</script>
+</html>

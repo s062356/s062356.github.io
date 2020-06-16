@@ -1,0 +1,540 @@
+.alert {
+  &.alert-danger {
+    background-color: lighten($red,30);
+    border: 1px solid lighten($red,20);
+    color: $red;
+    .icon {
+      color: $red;
+    }
+    a {
+      color: darken(#EC7C4D, 20);
+      text-decoration: underline !important;
+      @include transition(0.3s);
+      &:hover {
+        color: darken(#EC7C4D, 30);
+      }
+    }
+  }
+}
+.modal-backdrop {
+  background-color: #25302E;
+  &.show {
+    opacity: 0.75;
+  }
+}
+.modal {
+  .modal-dialog {
+    &.log-in-dialog{
+      @include i640{
+        max-width: 380px!important;
+        margin:20px auto;
+      }
+    }
+    &.xs-dialog {
+      @include i640{
+        max-width: 380px!important;
+        margin:30px auto;
+      }
+    }
+    &.modal-xl{
+      @include x1200{
+        width:auto!important;  
+        max-width:100%!important;
+        margin:30px!important;
+      }
+      @include x640{
+        max-width: 100% !important;
+        margin: 30px 10px!important;
+      }
+    }
+    @include x992{
+      width:auto!important;  
+      max-width: auto !important;
+      margin:30p;
+    }
+    @include x640 {
+      max-width: 100% !important;
+      margin: 30px 10px;
+    }
+    .modal-header {
+// position: relative;
+button.close {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  padding: 0px;
+  margin: 0px;
+  font-weight: normal;
+  font-size: 26px;
+  width: 14px;
+  height: 14px;
+  line-height: 26px;
+  color: #B8C2BF;
+  opacity: 1;
+  @include bgcover;
+  background-position: center;
+  background-image: url('../images/icons/close.png');
+  span {
+    display: none;
+    width: 26px;
+    height: 26px;
+  }
+  i {
+    display: none;
+  }
+}
+}
+}
+
+.modal-content {
+  padding: 40px;
+  margin: auto;
+  @include radius(5px);
+  border: 0px;
+  @include box-shadow(0,0,30px,rgba(37,48,46,0.5));
+  @include x640 {
+    padding: 40px 20px;
+  }
+  .modal-header {
+    padding: 0px;
+    border-bottom: none;
+  }
+  .modal-body {
+    padding: 0px;
+    @include x640 {
+      // margin-top: 15px;
+    }
+// flex:0 1 auto;
+}
+.modal-footer {
+  padding: 0px;
+  border: none;
+  margin-top: 30px;
+  bottom: auto;
+  &.text-center {
+    display: block;
+  }
+  .btn:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+}
+&.note-pop {
+  .modal-content {
+    background-color: #FFF6DD;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .modal-header {
+      position: absolute;
+      display: block;
+      line-height: 40px;
+      padding-left: 20px;
+      font-size: 18px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-color: #FFEDB8;
+    }
+    .note-textarea {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      &:focus {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  .count{
+    color:#B8B29C!important;
+  }
+}
+}
+.modal-dialog.xs-search {
+  @include x768 {
+    max-width: 100% !important;
+    margin: 0px;
+    @include radius(0px);
+    height: 100% !important;
+    background-color: white;
+    .modal-content{
+      box-shadow: none;
+    }
+  }
+  .modal-content {
+    @include radius(0px);
+    border: none;
+  }
+}
+
+// block pop
+.block-pop{
+  button.close{
+    z-index: 10;
+    @include x640{
+      background-color: rgba(255,255,255,0.7);
+      width: 24px!important;
+      height: 24px!important;
+      background-size: 14px!important;
+      @include radius(2px);
+    }
+  }
+  .modal-dialog{
+    max-width: 560px;
+  }
+  .modal-content{
+    display: flex;
+    flex-direction: row;
+    padding:0px;
+    @include radius(5px);
+    overflow: hidden;
+    @include x640{
+      flex-direction: column;
+    }
+    .bloack-pop-image{
+      width: 200px;
+      min-width: 200px;
+      @include bgcover;
+      @include x640{
+        position: relative;
+        padding-left: 100%;
+        padding-top: 56.25%;
+        content:" ";
+        width: auto;
+      }
+      &.free-end{
+        background-image: url('../images/block_pop/free_end.jpg');
+      }
+      &.payment{
+        background-image: url('../images/block_pop/membership.jpg');
+      }
+      &.charge{
+        background-image: url('../images/block_pop/charge.jpg');
+        @include x640{
+          background-image: url('../images/block_pop/charge_xs.jpg');
+        }
+      }
+    }
+    .content{
+      padding:40px;
+      @include x640{
+        text-align: center;
+        padding:30px 20px;
+      }
+    }
+  }
+}
+
+.discount-pop{
+  .modal-content{
+    overflow: hidden;
+    max-width:500px!important;
+  }
+  button.close{
+    z-index: 10;
+    background-color: rgba(255,255,255,0.7);
+      width: 24px!important;
+      height: 24px!important;
+      background-size: 14px!important;
+      @include radius(2px);
+  }
+  .discount-banner{
+    position: relative;
+    top:-40px;
+    left:-40px;
+    width:calc(100% + 80px);
+    height:auto;
+    @include x640{
+      top:-40px;
+    left:-20px;
+    width:calc(100% + 40px);
+    }
+
+  }
+}
+
+.gift-pop{
+  button.close{
+    z-index: 10;
+    background-color: rgba(255,255,255,0.7);
+      width: 24px!important;
+      height: 24px!important;
+      background-size: 14px!important;
+      @include radius(2px);
+  }
+  .gift-banner{
+    padding:0 30px;
+  }
+
+}
+
+.tutorial-pop{
+  .modal-dialog{
+    width:100%;
+    max-width:100%;
+    padding:0px;
+    margin:0px;
+  }
+}
+.tutorial-step1{
+   position: relative;
+   width:1140px;
+   margin:0 auto;
+   @include x1200{
+    width:960px;
+   }
+   @include x992{
+    width:100%;
+   }
+   .text{
+    position: absolute;
+    top:70px;
+    left: 160px;
+    display: inline;
+    img{
+      width:600px;
+    }
+    @include x768{
+      display: none;
+     }
+   }
+   .step-l{
+    position: relative;
+    .tutorial-event-btn{
+      position: absolute;
+      left: 280px;
+      top:0px;
+      width:90px;
+      height:60px;
+      background-color: white;
+      border:none;
+      opacity:0;
+      cursor:pointer;
+      z-index: 10;
+    }
+   }
+}
+.tutorial-step1-xs{
+  display: none;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: 10;
+  width:250px;
+  height: 100vh;
+  background-color: #5C6462;
+  overflow:hidden;
+  img{
+    width:100%;
+  }
+  @include x768{
+    display: block;
+  }
+  .text{
+    width: 260px;
+    position: fixed;
+    top:290px;
+    left: 30px;
+    display: inline;
+  }
+  .tutorial-event-btn{
+    position: absolute;
+    left: 0px;
+    top:230px;
+    width:250px;
+    height:60px;
+    z-index: 10;
+    background-color: white;
+    opacity:0;
+    border:none;
+    cursor: pointer;
+  }
+}
+
+.tutorial-step2{
+  .add-event-btn{
+    position: absolute;
+    right:15px;
+    top:110px;
+    @include x768{
+      top:100px;
+    }
+  }
+  .event-card{
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 60px;
+    top:205px;
+    .card-title{
+    padding-right: 15px;
+    margin-bottom: 20px;
+    h3{ 
+      @include textflow(2);
+      line-height:26px;
+      margin-bottom: 6px;
+    }
+  }
+    .card-border{
+      position: absolute;
+      top:0px;
+      left: 15px;
+      width: calc(100% - 30px);
+      height: 100%;
+      @include box-shadow(0px,1px,3px,rgba(0,0,0,0.2));
+      @include radius(2px);
+      z-index: -1;
+      background-color: white;
+    }
+    .card-content{
+      padding:30px;
+    }
+    .book-status{
+      position: absolute;
+      top:-15px;
+      left: 0px;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      .status-btn{
+        padding:3px 5px;
+        @include radius(2px);
+        box-shadow: 0 5px 10px 0 rgba(31,181,151,0.5), 0 3px 3px 0 rgba(0,0,0,0.2);
+        i{
+          margin-right: 6px;
+          top:5px;
+          height: 14px;
+          line-height: 14px;
+        }
+      }
+    }
+    .info-item{
+      padding:0px;
+      li{
+        padding:0px;
+        margin: 0px 0px 15px 0px;
+        i{
+          width: 15px;
+          margin-right: 10px;
+          color: $mainC1;
+          text-align: center;
+        }
+      }
+    }
+    .event-card-footer{
+      position: absolute;
+      bottom: 0px;
+      left: 15px;
+      width: calc(100% - 30px);
+      height: 50px;
+      background-color: #E9FFFB;
+      color: $mainC1;
+      .see-match-btn{
+        width:100%;
+        height:50px;
+        color: $mainC1;
+        border:none;
+        border-top:1px solid #F3F5F5;
+        background-color: #fff;
+        @include transition(0.3s);
+        &:hover,&:active,&:visited,&:focus {
+          background-color:$mainC1;
+          color:white!important;
+          i{
+            @include transition(0.3s);
+            color:white!important;
+          }
+        }
+        &.not-open{
+          color:#B3B3B3;
+          background-color: #f9f9f9;
+          cursor: not-allowed;
+          &:hover,&:active,&:visited,&:focus {
+            background-color:#f9f9f9;
+            color:#B3B3B3!important;
+            i{
+              @include transition(0.3s);
+              color:#B3B3B3!important;
+            }
+          }
+          i{
+            color:#B3B3B3;
+          }
+        }
+      }
+    }
+    .edit-icon{
+      position: absolute;
+      bottom: 60px;
+      left: 15px; 
+      width: calc(100% - 30px);
+      text-align: right;
+      padding-right: 30px;
+      z-index: 20;
+      .btn{
+        height: 24px;
+        line-height: 24px;
+        padding:0 6px;
+      }
+      i{
+        width: 24px;
+        height: 24px;
+        background-color: #F3F5F5;
+        color:#B8C2BF;
+        text-align: center;
+        line-height: 24px;
+        @include radius(2px);
+        margin-right: 5px;
+        cursor: pointer;
+        &:last-child{
+          margin-right: 0px;
+        }
+      }
+    }
+    .count-down{
+      color:$mainC1;
+    }
+  }
+
+  .tutorial-step2-img1{
+    position: absolute;
+    top:20px;
+    right: 10px;
+    width:480px;
+    @include x768{
+      display:none;
+    }
+  }
+  .tutorial-step2-img2{
+    position: absolute;
+    top:600px;
+    left: 10px;
+    width:550px;
+    @include x768{
+      display:none;
+    }
+  }
+  .tutorial-step2-img1-xs{
+    display: none;
+    @include x768{
+      position: absolute;
+      top:10px;
+      right:20px;
+      width:250px;
+      display:block;
+    }
+  }
+  .tutorial-step2-img2-xs{
+    display: none;
+    @include x768{
+      position: absolute;
+      top:600px;
+      width:300px;
+      left: calc(50% - 150px);
+      margin-bottom: 50px;
+      display:block;
+    }
+  }
+}

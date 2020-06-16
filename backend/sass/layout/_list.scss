@@ -1,0 +1,85 @@
+.dropdown-menu{
+  font-size: 1em;
+}
+
+ul{
+  &.list{
+    padding:0px 0px 0px 20px;
+    li{
+      list-style-type: square;
+      padding:0px 0px 0px;
+    }
+  }
+  li{
+    padding:15px 0px;
+  }
+  &.border-bottom li{
+      border-bottom:1px solid #B8C2BF;
+    }
+}
+
+ol{
+  &.list{
+    li{
+      list-style-type: decimal;
+      padding:0px 0px 0px;
+    }
+  }
+}
+
+.nav-pills.customise{
+    .nav-link{
+      @include radius(0px);
+      &.active{
+        background-color: transparent!important;
+      }
+    }
+}
+
+.drop-down-customized{
+  overflow: auto;
+  height: 100px;
+  width: 100%;
+}
+
+#header{
+  .dropdown-menu{
+    padding:0px;
+    border:1px solid #B8C2BF;
+  }
+  .dropdown{
+    .dropdown-item{
+      padding:10px 20px;
+    }
+    .dropdown-item:hover,.dropdown-item:focus,.dropdown-item:active{
+      background-color: $mainC1;
+      color: white;
+    }
+  }
+}
+
+.transaction-list{
+  padding:0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #B8C2BF;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+   &:last-child{
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      border-bottom: 0px solid $font-grey;
+    }
+  .transaction-title{
+    color:$font-grey;
+  }
+  .transaction-content{
+    color:$font-grey;
+  }
+  li{
+    padding:0px;
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}

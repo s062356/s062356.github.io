@@ -1,0 +1,86 @@
+.order-wrapper {
+    background-color: #F2F2F2;
+    .edit-area {
+        display: flex;
+        justify-content: flex-end;
+        .edit-button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+    .table-content {
+        table {
+            margin: 0 20px;
+            thead {
+                background-color: #fff;
+                th {
+                    padding: 15px;
+                    text-align: center;
+                }
+            }
+            tbody {
+                background-color: #F2F2F2;
+                tr {
+                    &:nth-child( 2n + 2 ) {
+                        background-color: #EBEBEB;
+                    }
+                }
+                th {
+                    text-align: center;
+                    
+                    .product-list {
+                        text-align: left;
+                        padding: 20px 0;
+                        border-bottom: 2px solid #fff;
+                        &:last-child {
+                            border-bottom: 0px;
+                        }
+                    }
+                    .status-button {
+                        margin: 0 auto;
+                        width: 100px;
+                        height: 40px;
+                        line-height: 40px;
+                        border-radius: 4px;
+                        &.revenue {
+                            background-color: #7ED321;
+                        }
+                        &.net-icome {
+                            background-color: #4A90E2
+                        }
+                        &.shipping {
+                            background-color: #F5A623;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        li {
+            text-align: center;
+            line-height: 40px;
+            background-color: #fff;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            width: 40px;
+            height: 40px;
+            &.active {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}

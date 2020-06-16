@@ -1,0 +1,566 @@
+// 下拉多選
+.dashboardcode-bsmultiselect{
+  position: relative;
+  .search-input{
+    margin-top: 0px;
+    width: 0px!important;
+    height: 0px!important;
+    display: block!important;
+    overflow:hidden!important;
+    .input{
+      display: block!important;
+       width: 0px!important;
+       height: 0px!important;
+       background-color: #E4F8F4!important;
+    }
+  }
+  .dropdown-menu{
+    max-height: 280px;
+    overflow-y: auto;
+    transform: translate3d(0px!important, auto, auto);
+  }
+    &>.form-control{
+    border:none!important;
+    box-shadow:none!important;
+    border:1px solid #B8C2BF!important;
+    padding:15px!important;
+    @include radius(2px);
+    }
+    ul.form-control{
+      display: block!important;
+      padding: 0px;
+    }
+  ul{
+    li{
+      padding:5px 0;
+      &:hover{
+        background-color: #E4F8F4!important;
+      }
+    }
+  }  
+  .custom-checkbox .custom-control-label::before{
+    @include radius(2px);
+  }
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+    background-color: $mainC1;
+    @include radius(2px);
+  }
+  .custom-control-label::after{
+    @include radius(2px);
+  }
+  .custom-checkbox:hover{
+    background-color: #E4F8F4;
+    color: $mainC1;
+  }
+  .badge{
+    background-color: #E6E6E6;
+    padding:0px 5px!important;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    @include radius(2px);
+    .close{
+      margin-left: 5px;
+      &:hover{
+        color: $mainC1;
+      }
+    }
+  }
+}
+// 下拉多選 END
+
+input.input{
+  background-color: white;
+}
+input:disabled {
+  background: #F3F5F5;
+  cursor: not-allowed;
+  &~label{
+    left: -10px;
+    top: -30px;
+    font-size:12px;
+  }
+}
+input:required {
+    box-shadow: none;
+}
+
+// select {
+//   color: #868C8A!important;
+//   option:not(:checked) { 
+//         background-color: #FFF; 
+//     }
+// }
+
+select:required:invalid {
+    color: #9e9e9e;
+}
+
+textarea,select{
+   &:focus{
+    border:1px solid $mainC1!important;
+    box-shadow: 0 0 0 3px rgba(31,181,151,0.1)!important;
+   }
+  }
+
+::-webkit-input-placeholder { color: #868C8A; }
+input::-moz-placeholder { color: #868C8A; }
+input::-moz-placeholder{color:#868C8A;}
+-ms-input-placeholder{color: #868C8A;}
+
+/* Estrutura */
+.input-container{
+  .password-visiblity{
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+
+input[type="text"]{
+    padding:10px;
+    border:1px solid $light-grey;
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    @include radius(2px);
+    &:focus{
+      border:1px solid $mainC1!important;
+      box-shadow: 0 0 0 3px rgba(31,181,151,0.1)!important; 
+    }
+}
+
+.input-container {
+  &.date-picker-container{
+    .label.active{
+      top:-30px;
+      left: -10px;
+      font-size: 12px;
+    }
+  }
+  &.ma0{
+    margin:0px;
+  }
+  position: relative;
+  margin-top: 30px;
+  textarea{
+    width: 100%;
+    border:1px solid $light-grey;
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    @include radius(2px);
+    padding:15px;
+  }
+  select{
+    border:1px solid $light-grey;
+    outline: none;
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 2px!important;
+    -webkit-border-radius: 2px!important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../images/icons/carrow.png');
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    background-position: calc(100% - 10px) 50%;
+    // border: 0;
+    // outline: 1px solid $light-grey;
+    outline-offset: -1px;
+    option.grey{
+      color:$font-grey!important;
+    }
+  }
+  input {
+    padding-top: 8px!important;
+    padding-bottom: 8px!important;
+    border:1px solid $light-grey;
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    background-color: #fff;
+    @include radius(2px);
+    &:focus{
+      border:1px solid $mainC1!important;
+      box-shadow: 0 0 0 3px rgba(31,181,151,0.1)!important; 
+    }
+  }
+
+  label {
+    top: 0px;
+    left: 0px; 
+    right: 0;
+    color: $font-grey;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 14px;
+    cursor: text;
+    transition: .3s ease-in-out;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    z-index: 10;
+    &.static{
+      position: relative;
+      display: block;
+      padding:0px;
+      font-size: 12px;
+    }
+  }
+
+  input,
+  label {
+    width: 100%;
+    padding:10px 10px;
+  }
+
+/* Interation */
+input:focus {
+  // border: 1px solid #26a69a; 
+   border:1px solid $mainC1!important;
+  box-shadow: 0 0 0 3px rgba(31,181,151,0.1)!important; 
+}
+
+
+input:focus ~ label {
+  color: #26a69a;
+  left: -10px;
+  top: -30px;
+  pointer-events: none;
+  font-size: 12px;
+}
+input:valid ~ label{
+  left: -10px;
+  top: -30px;
+  // color: $font-grey;
+  font-size: 12px;
+}
+
+&.group-input1{
+  position: relative;
+  color:$font-grey;
+  input{
+    padding-left: 40px;
+  }
+  label{
+    left:30px;
+    width: calc(100% - 30px);
+  }
+  .icon-l{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width: 40px;
+    text-align: center;
+    padding-top: 11px;
+    z-index: 10;
+    i{
+      font-size: 20px;
+      color: $font-grey;
+    }
+    img{
+      position: relative;
+      top:-3px;
+      height: 24px;
+      width: auto;
+    }
+  }
+  &.static{
+    label{
+      left:0px;
+      padding:0px;
+    }
+  }
+}
+
+&.group-input2{
+  position: relative;
+  color:$font-grey;
+  .icon-r{
+    position: absolute;
+    top:11px;
+    right:10px;
+    i{
+      font-size: 20px;
+      color: $font-grey;
+    }
+  }
+  &.static{
+    input:focus~label,input:valid~label{
+      position: absolute;
+      top:-20px;
+      left: 0px;
+      padding: 0px;
+    }
+    label{
+      padding: 0px;
+      position: absolute;
+      top:-20px!important;
+      font-size: 12px;
+    }
+  }
+}
+.sub-title{
+  margin-top: 5px!important;
+  font-size: 12px;
+}
+
+}
+
+.form-check{
+  position: relative;
+  padding:0px 0px 0px 0px;
+  display: inline-block;
+  .form-check-input{
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  input[type='checkbox']{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    & ~ label:before{
+     position: absolute;
+    top:3px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    content:' ';
+     background-image: url('../images/button/check_box_outline.png');
+     background-size: cover;
+     // background-color: #123123;
+    }
+    &:checked ~ label:before{
+      position: absolute;
+      top:3px;
+      left: 0px;
+      width: 16px;
+      height: 16px;
+      display: block;
+      content:' ';
+       background-image: url('../images/button/check_box.png');
+       background-size: cover;
+       // background-color: #123123;
+      }
+  }
+   input[type='radio']{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    left: 0px;
+    top:0px;
+    z-index: 10;
+    cursor: pointer;
+    & ~ label:before{
+     position: absolute;
+    top:3px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    content:' ';
+     background-image: url('../images/button/radio_outline.png');
+     background-size: cover;
+     // background-color: #123123;
+    }
+    &:checked ~ label:before{
+   position: absolute;
+      top:3px;
+      left: 0px;
+      width: 16px;
+      height: 16px;
+      display: block;
+      content:' ';
+       background-image: url('../images/button/radio.png');
+       background-size: cover;
+       // background-color: #123123;
+      }
+  }
+  label{
+    position: relative;
+    padding-left: 25px;
+    padding-right: 15px;
+    cursor: pointer;
+  }
+
+  &.icon-title-checked{
+    input ~ label:before{
+      top:15px!important;
+    }
+  }
+}
+
+// Range slider
+.slide-wrapper{
+  .location-picker{
+    width: 100%;
+    margin-right: 20px;
+  }
+  .range-value{
+    @include radius(100px)
+    text-align: center;
+    padding:5px;
+    min-width:80px;
+    background-color: #868C8A;
+    color: white;
+  }
+}
+.slider{
+  position: relative;
+  background-color: #E6E6E6;
+  border:1px solid #CCCCCC;
+  height: 8px;
+  width: 100%;  
+  margin-right: 20px;
+  @include radius(100px);
+    .bar{
+      position: absolute;
+      width: 0px;
+      height: 100%;
+      background-color: #1FB597;
+      @include radius(100px);
+  }
+}
+.location-picker[type=range] {
+    -webkit-appearance: none;
+    height: 10px;
+    @include radius(20px);
+    position: absolute;
+    background-color:transparent;
+    background-size: 200px;
+  
+}
+.location-picker[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color:transparent;
+    background-color: #123123;
+    height: 10px;
+    @include radius(20px);
+}    
+.location-picker[type=range]:focus {
+    outline: none;
+}
+.location-picker[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #FFFFFF; 
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+    cursor: pointer;
+}
+
+.password-prompt{
+  font-size: 12px;
+  i{
+    font-size: 14px;
+    position: relative;
+    top:3px;
+    margin-right: 5px;
+    color:#B8C2BF;
+  }
+  &.passed{
+    i{
+      color: $mainC1;
+    }
+  }
+}
+
+
+
+///// upload //////
+.input-upload-wrapper{
+  background-color: #F3F5F5;
+  border:1px solid darken(#F3F5F5, 10);
+  padding:15px;
+  @include radius(2px);
+  margin-top: 20px;
+  .upload-btn{
+    position: relative;
+    input{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 10;
+      opacity:0;
+    }
+  }
+  #clean{
+    position: relative;
+    border:none;
+    color: #1FB597;
+    display: none;
+    z-index: 15;
+    background-color: transparent;
+  }
+  .preview{
+    margin:0 10px;
+    color: #868C8A;
+  }
+}
+
+
+.bootstrap-select .bs-ok-default::after {
+    width: 0.3em;
+    height: 0.6em;
+    border-width: 0 0.1em 0.1em 0;
+    transform: rotate(45deg) translateY(0.5rem);
+}
+
+.btn.dropdown-toggle:focus {
+    outline: none !important;
+}
+
+
+
+// date picker
+.react-datepicker{
+  border:none!important;
+  @include box-shadow(0,0,10px,rgba(0,0,0,0.1)!important);
+  .react-datepicker__month-select{
+    width:100px;
+    margin-top: 10px;
+  }
+  .react-datepicker__year-select{
+    width:100px;
+    margin-top: 10px;
+  }
+}
+.react-datepicker__header{
+  border-bottom:none!important;
+}
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range{
+  background-color: $mainC1!important;
+  @include radius(100px!important);
+}
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected{
+  background-color: $mainC1!important;
+  @include radius(100px!important);
+}
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before{
+  display: none;
+}
+
+// Brain tree 調整
+.braintree-sheet.braintree-card{
+  max-height: auto!important;
+  input:focus {
+    // border: 1px solid #26a69a; 
+     border:none!important;
+    box-shadow: none!important; 
+  }
+}
+

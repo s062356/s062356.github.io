@@ -1,0 +1,72 @@
+.ad-banner{
+  position: relative;
+  background-color: #f9f9f9;
+  width:100%;
+  height:600px;
+  margin-bottom: 150px;
+  background-image:url('../images/planner_landing_page/ad-banner-bg.jpg');
+  @include bgcover;
+  @include x768{
+    height: auto;
+    background-image:url('../images/planner_landing_page/ad-banner-bg-m.jpg');
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+  }
+  &:after{
+    position: absolute;
+    top:0px;
+    right:0px;
+    display: block;
+    content:" ";
+  }
+  .context{
+    width:50%;
+    @include x768{
+      width:100%;
+      padding:30px 20px;
+      text-align:center;
+    }
+    .title{
+      font-size:36px;
+      line-height:50px;
+      margin-bottom: 30px;
+      @include x768{
+        font-size:26px;
+        line-height:40px;
+        margin-bottom: 20px;
+      }
+    }
+    .content{
+      font-size:24px;
+      line-height:40px;
+      margin-bottom: 30px;
+      @include x768{
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height:32px;
+      }
+    }
+  }
+  .banner-image{
+    position: absolute;
+    width:600px;
+    height: auto;
+    top:0px;
+    left: calc( 50% - 80px);
+    img{
+      // position: absolute;
+      top:0px;
+      left: 0px;
+      width:100%;
+      height:auto;
+    }
+    @include x768{
+      position: relative;
+      left:0px;
+      width:100%;
+      height:auto;
+    }
+  }
+}

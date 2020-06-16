@@ -1,0 +1,47 @@
+.sign-up-logo{
+  text-align: center;
+  img{
+  height: 30px;
+  width: auto;
+  margin:0 auto;
+  }
+}
+
+.icon{
+  &.message{
+    width: 18px;
+    height: 18px;
+    background-image: url('../images/icons/message.png');
+    @include bgcover;
+    display: inline-block;
+    line-height: 14px;
+    position: relative;
+    top:2px;
+    margin-right: 10px;
+  }
+}
+
+.avatar-sm{
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  @include bgcover;
+  background-position: center;
+  @include radius(100px);
+}
+
+i.icon{
+  font-size: 20px;
+  height: 14px;
+  line-height: 14px;
+  position: relative;
+  top: 5px;
+  margin-right: 8px;
+  color: $mainC1;
+  &.font-main{
+    color: $font-main!important;
+  }
+  &.ma0{
+    margin:0px;
+  }
+}

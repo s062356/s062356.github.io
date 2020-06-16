@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--文章編碼：utf8萬國碼 big5繁體中文-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--IE6 7 8 支援新的格式-->
+    <meta name="viewport" content="width=device-width;initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!--行動裝置伸縮比例模式-->
+    <!-- 針對蘋果手機開始 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <title>ORDER</title>
+    <!--最重要的關鍵字-->
+    <meta name="description" content="描述字">
+    <!--更新日期-->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!--分頁標籤圖示-->
+    <link rel="stylesheet" href="css/bootstrap4/bootstrap.css">
+    <!-- 參考網站http://getbootstrap.com/ -->
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- 自訂 -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/customized.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+</head>
+<body class="bg-grey">
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-title">SHOPTIME</div>
+                <ul class="header-list">
+                    <li>
+                        <a href="./index_bs.html">HOME</a>
+                    </li>
+                    <li>
+                        <a class="active" href="./order_bs.html">ORDERS</a>
+                    </li>
+                    <li>
+                        <a href="./product.html">
+                            PRODUCT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div>ADMIN</div>
+            </div>
+        </div>
+        <div class="order-wrapper">
+            <div class="edit-area">
+                <div class="edit-button">EDIT SECTION</div>
+            </div>
+            <div class="table-content">
+                <table>
+                    <thead>
+                        <th class="wc10">Customer</th>
+                        <th class="wc10">Product List</th>
+                        <th class="wc10">Total</th>
+                        <th class="wc10">Add To Cart</th>
+                        <th class="wc10">Check-out</th>
+                        <th class="wc10">Address</th>
+                        <th class="wc10">Status</th>
+                    </thead>
+                    <tbody>
+                        <!-- list -->
+                        <tr>
+                            <th>Ian Medina</th>
+                            <th>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                            </th>
+                            <th>$1,200</th>
+                            <th>2018/6/8 13:39</th>
+                            <th>2018/6/8 20:23</th>
+                            <th>386 Windler Drivers Apt. 358</th>
+                            <th>
+                                <div class="status-button revenue">PAID</div>
+                            </th>
+                        </tr>
+                        <!-- end list -->
+                        <!-- list -->
+                        <tr>
+                            <th>Ian Medina</th>
+                            <th>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                            </th>
+                            <th>$1,200</th>
+                            <th>2018/6/8 13:39</th>
+                            <th>2018/6/8 20:23</th>
+                            <th>386 Windler Drivers Apt. 358</th>
+                            <th>
+                                <div class="status-button shipping">SHIPPING</div>
+                            </th>
+                        </tr>
+                        <!-- end list -->
+                        <!-- list -->
+                        <tr>
+                            <th>Ian Medina</th>
+                            <th>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                            </th>
+                            <th>$1,200</th>
+                            <th>2018/6/8 13:39</th>
+                            <th>2018/6/8 20:23</th>
+                            <th>386 Windler Drivers Apt. 358</th>
+                            <th>
+                                <div class="status-button net-icome">DONE</div>
+                            </th>
+                        </tr>
+                        <!-- end list -->
+                        <!-- list -->
+                        <tr>
+                            <th>Ian Medina</th>
+                            <th>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                                <div class="product-list">
+                                    <div>Vestibulum.</div>
+                                    <div>$1,400</div>
+                                </div>
+                            </th>
+                            <th>$1,200</th>
+                            <th>2018/6/8 13:39</th>
+                            <th>2018/6/8 20:23</th>
+                            <th>386 Windler Drivers Apt. 358</th>
+                            <th>
+                                <div class="status-button shipping">SHIPPING</div>
+                            </th>
+                        </tr>
+                        <!-- end list -->
+                    </tbody>
+                </table>
+                <ul class="footer">
+                    <li><<</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li class="active">3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>>></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

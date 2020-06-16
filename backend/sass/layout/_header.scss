@@ -1,0 +1,268 @@
+#header{
+  position: fixed;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  background-color: #FFFFFF;
+  height: 60px;
+  z-index: 1000;
+  @include box-shadow(0,1px,5px,rgba(0,0,0,0.1));
+  @include x768{
+    height: 50px;
+  }
+  .container{
+    @include x992{
+      max-width: 100%; 
+    }
+  }
+  .menu-open-btn{
+    float: left;
+    height: 50px;
+    text-align:center;
+    i{
+      line-height: 50px;
+    }
+  }
+  .logo{
+    float: left;
+    position: relative;
+    top:15px;
+    // &:after{
+    //   position: absolute;
+    //   right: -44px;
+    //   top:0px;
+    //   background-image: url('../images/icons/beta.png');
+    //   width: 37px;
+    //   height: 18px;
+    //   display: block;
+    //   @include bgcover;
+    //   content:'';
+    //   @include x768{
+    //     right: -28px;
+    //      width: 24px;
+    //      height: 12px;
+    //   }
+    // }
+    @include x768{
+      position: absolute;
+      top:12px;
+      left: calc(50% - 30px);
+      display: inline-block;
+      float: none;
+      text-align: center;
+    }
+    img{
+      height: 30px;
+      width: auto;
+      @include x768{
+        width: 60px;
+        height: auto;
+      }
+    }
+  }
+  .sub-nav{
+    float:right;
+    line-height:60px;
+    @include x768{
+      display:none;
+    }
+    a{
+      padding:0 20px;
+      &:hover{
+        color:$mainC1;
+      }
+    }
+  }
+  .menu-nav{
+    line-height: 60px;
+    @include i768{
+    display: block!important;  
+    opacity: 1!important;
+    padding-left:80px;
+    }
+    ul{
+      padding:0px;
+      margin:0;
+      a{
+        cursor: pointer;
+        @include transition(0.3s);
+        &.active{
+          color: $mainC1;
+          li{
+            position: relative;
+            &:before{
+              position: absolute;
+              bottom:0px;
+              left: 0px;  
+              display: block;
+              content:' ';
+              width: 100%;
+              height: 2px;
+              background-color: $mainC1;
+            }
+          }
+        }
+        &:hover{
+          color:$mainC1;
+        }
+      }
+      li{
+        display: inline-block;
+        padding:0px 20px;
+      }
+    }
+    @include x768{
+      float: none;
+      width: auto;
+      min-width:250px;
+      height: 100vh;
+      position: fixed;
+      top:0px;
+      left: -300px;
+      z-index: 999;
+      background-color: white;
+      padding: 50px 30px 0px 30px; 
+      opacity: 0;
+      z-index: 100000;
+      ul{
+        li{
+          display: block;
+          padding:0px;
+        }
+        a{
+          @include transition(0.3s);
+          &.active{
+            color: $mainC1;
+            li{
+              position: relative;
+              &:before{
+               display: none;
+             }
+           }
+         }
+         &:hover{
+          color:$mainC1;
+        }
+      }
+    }
+  }
+  .xs-logo{
+    display: none;
+    @include x768{
+      display: block;
+    }
+    img{
+      width: 90px;
+      height: auto;
+    }
+  }
+  .close-menu-btn{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: $mainC1;
+    color: white;
+    text-align: center; 
+    i{
+      line-height: 50px;
+    }
+  }
+  .unread-notification{
+    display: inline;
+    max-height:10px;
+    padding:0 5px;
+    color:white;
+    @include radius(100px);
+    padding:2px;
+    text-align:center;
+    background-color: $mainC2;
+    border:1px solid darken($mainC2,5);
+    margin-left: 5px;
+    span{
+      display:inline-block;
+      min-width:16px;
+      padding:0 4px;
+    }
+  }
+}
+.credit-badge{
+  position: relative;
+  float: right; 
+  top:18px;
+  margin-left: 10px;
+  @include x768{
+    top:13px;
+  }
+}
+.menu-search{
+  position: relative;
+  top:12px;
+  float: right;  
+  width: 36px;
+  height: 36px;
+  color: #25302E;
+  text-align: center;
+  cursor: pointer;
+  @include transition(0.3s);
+  &:hover{
+    color: $mainC1;
+  }
+  i{
+    line-height: 36px;
+  }
+}
+
+.avator{
+  width:36px;
+  height: 36px;
+  position: relative;
+  top:12px;
+  background-color: #CCCCCC;
+  float: right;
+  margin-left: 15px;
+  @include radius(100px);
+  @include bgcover;
+  background-position: center;
+  cursor:pointer;
+  @include x768{
+    top: 7px;
+  }
+}
+
+.account-drop{
+  .dropdown-menu{
+    top:10px!important;
+    @include x768{
+      top: 5px!important;
+    }
+  }
+}
+
+}
+
+.header-mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37,48,46,0.6);
+  z-index: 999;
+  top:0px;
+  left: 0px;
+  display: none;
+  @include i768{
+    display: none!important;
+  }
+}
+
+.logo-header-black{
+  width:100%;
+  height:50px;
+  background-color: $font-main;
+  text-align:center; 
+  .logo{
+    height: 40px;
+    padding-top: 10px;
+  }
+}
